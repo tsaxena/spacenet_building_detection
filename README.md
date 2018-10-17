@@ -14,8 +14,8 @@ Download and install QGIS to explore the data.
 ## Evaluation
  
 
-## References
-1. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
-2. https://www.qgis.org/en/site/forusers/download.html#
-3. 
+## References 
+1. Data download help https://www.qgis.org/en/site/forusers/download.html# 
+2. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
+3. https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571
 
