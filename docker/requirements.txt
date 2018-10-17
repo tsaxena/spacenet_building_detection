@@ -1,0 +1,8 @@
+numpy
+scikit-learn
+scipy
+pillow
+tensorflow==1.5.0
+appnope==0.1.0
+matplotlib==2.2.2
+jupyter
