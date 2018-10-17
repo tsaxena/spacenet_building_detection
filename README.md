@@ -7,7 +7,7 @@ Followed [1] to download the spacenet data from aws and explore data using QGIS
 ### Explore the data using QGIS
 Download and install QGIS to explore the data.
 
-### Transform the data to 
+### Transform the data to format consumed by the ML algorithms 
 
 ## Training
 
