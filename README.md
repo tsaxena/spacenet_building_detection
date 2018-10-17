@@ -17,6 +17,8 @@ Download and install QGIS to explore the data.
 ## References 
 1. Data download help: http://lncohn.com/spacenet/spacenet_data.html
 2. Download QGIS: https://www.qgis.org/en/site/forusers/download.html# 
-3. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
-4. https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571
+3. Visualize the data: https://medium.com/@sumit.arora/getting-started-with-aws-spacenet-and-spacenet-dataset-visualization-basics-7ddd2e5809a2
+4. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
+5. https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571
+
 
