@@ -12,7 +12,8 @@ docker build -t <name> .
 docker run -p 8887:8888 -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/notebooks:/model1/notebooks -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/data:/model1/data -it <name>
 ```
 
-### Transform the data to 
+### Transform the data to format consumed by the ML algorithms 
+
 
 ## Training
 
