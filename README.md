@@ -1,12 +1,21 @@
 # Spacenet building identification
 
-## Data Access
-Download the spacenet data from aws 
+## Data Preperation
+Followed [1] to download the spacenet data from aws and explore data using QGIS
+### Data Access
 
-## Explore the data using QGIS
-Download QGIS to explore the data https://www.qgis.org/en/site/forusers/download.html#
+### Explore the data using QGIS
+Download and install QGIS to explore the data.
 
-## Train
+### Transform the data to 
 
-## Evaluate
+## Training
+
+## Evaluation
  
+
+## References
+1. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
+2. https://www.qgis.org/en/site/forusers/download.html#
+3. 
+
