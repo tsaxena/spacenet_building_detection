@@ -2,7 +2,12 @@ numpy
 scikit-learn
 scipy
 pillow
+Cython
 tensorflow==1.5.0
 appnope==0.1.0
 matplotlib==2.2.2
+rtree
+shapely==1.5.17
+geopandas==0.2.1
+geojsonio==0.0.3
 jupyter
