@@ -56,3 +56,7 @@ RUN pip3 install -r /workspace/docker/requirements.txt
 # Make model1 your work directory
 WORKDIR /workspace
 
+
+# Create volumes (folders). one (data) to store data and the other(notebooks) to save your code.
+VOLUME ["/workspace/data"]
+
