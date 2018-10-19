@@ -1,0 +1,62 @@
+# This is the docker image available. I am using cpu version here. If needed there is gpu version available.
+FROM ubuntu:17.10
+LABEL maintainer sg@adobe.com
+
+
+## Install General Requirements
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        apt-utils \
+        cpio \
+        cmake \
+        git \
+        libgtk2.0-dev \
+        libopencv-dev \
+        python-opencv \
+        python3.6-dev \
+        python3-pip \
+        python3-setuptools \
+        lsof \
+        nano && \
+    rm -rf /var/lib/apt/lists/*
+
+## Install Basics for Python
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python-numpy \
+        python-scipy
+
+## Install Essentials for Pillow
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libjpeg-dev \
+        zlib1g \
+        libtiff5-dev \
+        libfreetype6-dev \
+        libwebp-dev 
+
+## Install GDAL Requirments
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        gdal-bin \
+        python3-gdal \
+        python3.6-tk
+
+## Install RTRee
+## python3-pyproj solves error otherwise generated from pip install geopandas
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libspatialindex-dev \
+        python3-pyproj
+
+# create a folder called model1 and copy all the files in the folder into that folder
+ADD . /workspace
+
+# Copy the file into docker
+#COPY requirements.txt requirements.txt
+
+# Run the copied file
+RUN pip3 install -r /workspace/docker/requirements.txt
+
+# Make model1 your work directory
+WORKDIR /workspace
+
+
+# Create volumes (folders). one (data) to store data and the other(notebooks) to save your code.
+VOLUME ["/workspace/data"]
+

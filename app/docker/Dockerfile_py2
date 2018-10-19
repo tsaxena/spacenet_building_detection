@@ -1,0 +1,62 @@
+# This is the docker image available. I am using cpu version here. If needed there is gpu version available.
+FROM ubuntu:16.04
+LABEL maintainer sg@adobe.com
+
+## Install General Requirements
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        apt-utils \
+        build-essential \
+        cmake \
+        git \
+        wget \
+        vim \
+        python-dev \
+        python-pip \
+        python-setuptools
+RUN pip install --upgrade pip
+
+## Install Basics for Python
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python-numpy \
+        python-scipy
+
+## Install Essentials for Pillow
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libjpeg-dev \
+        zlib1g \
+        libtiff5-dev \
+        libfreetype6-dev \
+        libwebp-dev \
+        libopenjpeg-dev
+
+RUN pip install Pillow
+
+## Install GDAL Requirments
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        gdal-bin \
+        python-gdal
+
+## Instal OpenCV Requirements
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libopencv-dev \
+        python-opencv
+
+## Install RTRee
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libspatialindex-dev
+
+RUN pip install rtree
+
+# create a folder called model1 and copy all the files in the folder into that folder
+ADD . /workspace
+
+# Run the copied file
+RUN pip install -r /workspace/docker/requirements_2.txt
+
+# Make model1 your work directory
+WORKDIR /workspace
+
+
+# Create volumes (folders). one (data) to store data and the other(notebooks) to save your code.
+VOLUME ["/workspace/data"]
+
