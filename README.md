@@ -8,6 +8,7 @@ Followed [1] to download the spacenet data from aws and explore data using QGIS
 Download and install QGIS to explore the data. Follow the steps in [3] to visualize data using QGIS. 
 
 ### Explore the data using Jupyter notebook
+### Execute this command from app folder
 ```bash
 docker build -t <name> .
 docker run -p 8887:8888 -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/notebooks:/model1/notebooks -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/data:/model1/data -it <name>
