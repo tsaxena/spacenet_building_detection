@@ -15,10 +15,13 @@ docker run -p 8887:8888 -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetec
 
 ### Transform the data to format consumed by the ML algorithms 
 ```bash
-docker build -t geo . -f ./docker/Dockerfile_cpu   # will give errors but build successfully
+cd /app
+docker build -t geo2 . -f ./docker/Dockerfile_py2   # will give errors but build successfully
 docker run  -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/data:/workspace/data -it geo /bin/bash
 ```
-
+```bash
+python generate_bbox.py
+```
 
 ## Training
 
