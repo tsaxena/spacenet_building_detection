@@ -5,7 +5,7 @@ from osgeo import gdal, osr
 import numpy as np
 import json
 import sys
-import geoTools as gT
+import geo_tools as gT
 
 ###############################################################################    
 def geojson_to_pixel_arr(raster_file, geojson_file, pixel_ints=True,
