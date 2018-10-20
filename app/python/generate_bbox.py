@@ -26,7 +26,7 @@ if __name__ == "__main__":
             tif_file_path = os.path.join(tif_path, tif_file)
 
             # geojson file
-            geojson_file = "buildings_"+file_name[6:]+".geojson"
+            geojson_file = "buildings_"+file_name[15:]+".geojson"
             geojson_file_path = os.path.join(geojson_path, geojson_file)
             print(geojson_file_path)
             if os.path.isfile(geojson_file_path):
