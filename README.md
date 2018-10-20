@@ -22,10 +22,9 @@ docker build -t geo2 . -f ./docker/Dockerfile_py2   # will give errors but build
 docker run  -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/data:/workspace/data -it geo /bin/bash
 ```
 
-
+Download spacenet_sample and place it in the data folder.
 ```bash
 python generate_bbox.py
-python logistics.py
 ```
 
 ## Training
