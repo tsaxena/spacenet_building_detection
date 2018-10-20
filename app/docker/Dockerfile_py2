@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         vim \
         python-dev \
         python-pip \
-        python-setuptools
+        python-setuptools \
+        nano
 RUN pip install --upgrade pip
 
 ## Install Basics for Python

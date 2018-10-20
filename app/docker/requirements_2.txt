@@ -1,7 +1,7 @@
-GDAL==1.11.3
 numpy==1.10.4
 pandas==0.17.1
-Rtree==0.8.2
-shapely==1.5.17
-geopandas==0.2.1
+Rtree==0.8.3
+shapely==1.5.16
+geopandas==0.3.0
 geojsonio==0.0.3
+six==1.11.0
