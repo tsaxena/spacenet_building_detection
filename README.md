@@ -27,6 +27,10 @@ Download spacenet_sample and place it in the data folder.
 python generate_bbox.py
 ```
 
+TODO:
+Convert to TFRecords
+Train tensorflow
+
 ## Training
 
 ## Evaluation
