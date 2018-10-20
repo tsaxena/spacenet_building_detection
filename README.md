@@ -17,10 +17,14 @@ docker run -p 8887:8888 -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetec
 ```bash
 cd /app
 docker build -t geo2 . -f ./docker/Dockerfile_py2   # will give errors but build successfully
+# for fresh build docker build --no-cache -t geo2 . -f ./docker/Dockerfile_py2 
 docker run  -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacenet_building_detection/data:/workspace/data -it geo /bin/bash
 ```
+
+
 ```bash
 python generate_bbox.py
+python logistics.py
 ```
 
 ## Training
