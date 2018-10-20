@@ -24,7 +24,8 @@ docker run  -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacene
 
 Download spacenet_sample and place it in the data folder.
 ```bash
-python generate_bbox.py
+python generate_test_train.py
+python generate_images.py
 ```
 
 TODO:
