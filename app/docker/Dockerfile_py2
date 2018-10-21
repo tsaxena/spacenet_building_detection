@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cmake \
         git \
         wget \
-        vim \
+        unzip \
         python-dev \
         python-pip \
         python-setuptools \
+        libprotobuf-dev \
         nano
 RUN pip install --upgrade pip
 
@@ -48,15 +49,38 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install rtree
 
+## Install tensorflow requirements
+RUN apt-get install -y protobuf-compiler \
+  python-pil \
+  python-lxml \
+  python-tk
+
+# need to manually install protobuf v3
+RUN mkdir protobuf && \
+     cd protobuf && \
+     wget -O protobuf.zip https://github.com/google/protobuf/releases/download/v3.0.0/protoc-3.0.0-linux-x86_64.zip &&\
+     unzip protobuf.zip  && \
+     rm -f protobuf.zip
+   
+
+
 # create a folder called model1 and copy all the files in the folder into that folder
 ADD . /workspace
 
 # Run the copied file
 RUN pip install -r /workspace/docker/requirements_2.txt
 
+
+# tensorflow object detection
+RUN mkdir -p /tensorflow/models
+RUN git clone https://github.com/tensorflow/models.git /tensorflow/models && \
+        cd /tensorflow/models/research  && \
+        /protobuf/bin/protoc object_detection/protos/*.proto --python_out=. 
+        
+ENV PYTHONPATH "$PYTHONPATH:/tensorflow/models/research:/tensorflow/models/research/slims"
+
 # Make model1 your work directory
 WORKDIR /workspace
-
 
 # Create volumes (folders). one (data) to store data and the other(notebooks) to save your code.
 VOLUME ["/workspace/data"]

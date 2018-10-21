@@ -25,12 +25,13 @@ docker run  -v /Users/trsaxena/Projects/learn/demos/ImageObjectDetection/spacene
 Download spacenet_sample and place it in the data folder.
 ```bash
 python generate_test_train.py
-python generate_images.py
+python generate_jpg_images.py
+python generate_tfrecord.py --csv_input=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/train_labels.csv  --output_path=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/train.record
+python generate_tfrecord.py --csv_input=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/test_labels.csv  --output_path=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/test.record
 ```
 
-TODO:
-Convert to TFRecords
-Train tensorflow
+### Train
+Setup an EC2 instance
 
 ## Training
 
@@ -44,5 +45,7 @@ Train tensorflow
 4. https://medium.com/the-downlinq/getting-started-with-spacenet-data-827fd2ec9f53
 5. https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571
 6. Running jupyter notebook inside docker: https://medium.com/@14prakash/playing-with-caffe-and-docker-to-build-deep-learning-models-99c9570ffc3d
-
+7. Object detection using Tensorflow: https://towardsdatascience.com/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9
+8. https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73
+9. https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
 

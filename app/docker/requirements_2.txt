@@ -1,7 +1,9 @@
-numpy==1.10.4
+numpy==1.11.0
 pandas==0.17.1
 Rtree==0.8.3
 shapely==1.5.16
 geopandas==0.3.0
 geojsonio==0.0.3
 six==1.11.0
+protobuf==3.3.0
+tensorflow==1.2.1
