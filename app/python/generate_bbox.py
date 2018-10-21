@@ -13,6 +13,7 @@ column_name = ['filename', 'width', 'height', 'class', 'xmin', 'ymin', 'xmax', '
 
 tif_path = config.get("FILE_PATHS","TIF_PATH")
 geojson_path = config.get("FILE_PATHS","GEOJSON_PATH")
+output_path = config.get("FILE_PATHS","OUTPUT_PATH")
 
 if __name__ == "__main__":
     mylist = []
@@ -51,11 +52,21 @@ if __name__ == "__main__":
             break
         
 
+    # train data
     my_df = pd.DataFrame(mylist, columns=column_name)
-    my_df.to_csv('ssd_train_labels.csv', index=None)
-    with open("converted_files.txt","w") as jpglist:
+    train_file_path = os.path.join(output_path,'ssd_train_labels.csv' )
+    my_df.to_csv(train_file_path, index=None)
+
+    # test data
+    test_df = my_df.sample(frac=float(config.get("PARAMS","TEST_SIZE")))
+    test_file_path = os.path.join(output_path,'ssd_test_labels.csv' )
+    test_df.to_csv( test_file_path, index=None)
+
+    # file to convert to jpg
+    convert_file_path = os.path.join(output_path,'converted_files.txt' )
+    with open(convert_file_path,"w") as jpglist:
         for filename in converted_files:
             jpglist.write("{}\n".format(filename))
-    test_df = my_df.sample(frac=float(config.get("PARAMS","TEST_SIZE")))
-    test_df.to_csv("ssd_test_labels.csv", index=None)
+
+   
     print("SSD style train-test bounding boxes created in csv!")
