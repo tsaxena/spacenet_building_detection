@@ -30,12 +30,15 @@ python generate_tfrecord.py --csv_input=/workspace/data/spacenet_sample/AOI_2_Ve
 python generate_tfrecord.py --csv_input=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/test_labels.csv  --output_path=/workspace/data/spacenet_sample/AOI_2_Vegas_Train/output/data/test.record
 ```
 
-### Train
-Setup an EC2 instance
+### Training
+Download the link http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+Configure 
 
-## Training
+- Train Locally 
+https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md
 
-## Evaluation
+- Train on GCP
+### Evaluation
  
 
 ## References 
