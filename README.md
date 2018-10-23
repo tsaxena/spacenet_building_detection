@@ -47,7 +47,7 @@ For training, I used `ssd_mobilenet_v1_pets.config` as basis. I needed to adjust
 The directory structure looks like this: 
 ```
 +data
-  -label_map file
+  - label_map file
   - train.record # TFRecord file
   - train_labels.csv
   - test.record # TFRecord file
@@ -65,6 +65,9 @@ The directory structure looks like this:
 Follow the steps in [10]
 
 
+## Set up AWS 
+
+
 ## Evaluation
  
 
@@ -78,6 +81,7 @@ Follow the steps in [10]
 7. Object detection using Tensorflow: https://towardsdatascience.com/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9
 8. https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73
 9. https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac
-10. https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md
-11. http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+10. Training locally: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_locally.md
+11. Pretrained model: http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz
+12. Retrain https://cv-tricks.com/tensorflow-tutorial/save-restore-tensorflow-models-quick-complete-tutorial/
 
