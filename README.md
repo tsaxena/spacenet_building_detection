@@ -1,7 +1,5 @@
 # Spacenet building identification
 
-Moving to my repo
-
 ## Data 
 
 ### Explore the data using QGIS
